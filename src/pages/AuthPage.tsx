@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
+import { Link, useSearchParams, useNavigate } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -10,6 +10,7 @@ import { LanguageSelector } from '@/components/LanguageSelector';
 const AuthPage: React.FC = () => {
   const { t } = useLanguage();
   const [searchParams] = useSearchParams();
+  const navigate = useNavigate();
   const [isLogin, setIsLogin] = useState(searchParams.get('mode') !== 'signup');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -19,7 +20,7 @@ const AuthPage: React.FC = () => {
     // @ts-ignore - google is loaded from script in index.html
     if (window.google) {
       window.google.accounts.id.initialize({
-        client_id: "YOUR_CLIENT_ID.apps.googleusercontent.com",
+        client_id: import.meta.env.VITE_GOOGLE_CLIENT_ID || "YOUR_CLIENT_ID_PLACEHOLDER",
         callback: handleCredentialResponse
       });
 
@@ -34,6 +35,7 @@ const AuthPage: React.FC = () => {
     // This function handles the response from Google
     console.log("Encoded JWT ID token: " + response.credential);
     // Here you would send the token to your backend or Firebase
+    navigate('/dashboard');
   };
 
   const handleSubmit = (e: React.FormEvent) => {
