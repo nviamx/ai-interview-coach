@@ -276,4 +276,3 @@ npm run preview
 - [ ] Real speech recognition using Web Speech API or cloud services
 - [ ] AI integration for dynamic question generation (OpenAI/Anthropic)
 - [ ] Interview recording playback
-
