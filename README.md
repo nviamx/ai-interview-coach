@@ -2,20 +2,20 @@
 
 > An intelligent interview preparation platform powered by AI that helps job candidates practice interviews with personalized questions, real-time voice interaction, and comprehensive feedback analysis.
 
-## 🎯 Overview
+## Overview
 
 AI Interview Coach is a multilingual web application designed to help job seekers prepare for interviews through AI-powered practice sessions. The platform generates personalized interview questions based on uploaded CVs and job descriptions, conducts voice-based interview simulations, and provides detailed performance feedback with actionable insights.
 
 ### Key Highlights
 
-- **🤖 AI-Powered Question Generation** - Tailored questions based on your CV and target role
-- **🎤 Voice-Based Interviews** - Natural conversation flow with speech recognition
-- **🌍 Multilingual Support** - Practice in English, Hebrew, or Arabic with code-switching detection
-- **📊 Comprehensive Analytics** - Detailed scoring across multiple performance dimensions
-- **👨‍🏫 Coach Dashboard** - Tools for career coaches and institutions to manage candidates
-- **📈 Progress Tracking** - Monitor improvement over time with historical data
+- ** AI-Powered Question Generation** - Tailored questions based on your CV and target role
+- ** Voice-Based Interviews** - Natural conversation flow with speech recognition
+- ** Multilingual Support** - Practice in English, Hebrew, or Arabic with code-switching detection
+- ** Comprehensive Analytics** - Detailed scoring across multiple performance dimensions
+- **👨 Coach Dashboard** - Tools for career coaches and institutions to manage candidates
+- ** Progress Tracking** - Monitor improvement over time with historical data
 
-## ✨ Features
+##  Features
 
 ### For Candidates
 
@@ -77,7 +77,7 @@ Create tailored interview templates for specific:
 - Session completion rates
 - Improvement trends
 
-## 🏗️ Technology Stack
+##  Technology Stack
 
 ### Frontend
 - **React 18.3** - Modern UI library with hooks
@@ -100,7 +100,7 @@ Create tailored interview templates for specific:
 - **Testing Library** - Component testing utilities
 - **jsdom** - DOM simulation for tests
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -119,8 +119,8 @@ nvm use 16
 1. **Clone the repository**
 
 ```bash
-git clone <repository-url>
-cd interview-pro-main
+git clone https://github.com/nviamx/ai-interview-coach
+cd ai-interview-coach
 ```
 
 2. **Install dependencies**
@@ -149,7 +149,7 @@ VITE_API_URL=https://your-api-endpoint.com
 VITE_SPEECH_API_KEY=your-speech-recognition-key
 ```
 
-## 📜 Available Scripts
+##  Available Scripts
 
 | Command | Description |
 |---------|-------------|
@@ -161,7 +161,7 @@ VITE_SPEECH_API_KEY=your-speech-recognition-key
 | `npm test` | Run test suite once |
 | `npm run test:watch` | Run tests in watch mode |
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 interview-pro-main/
@@ -203,7 +203,7 @@ interview-pro-main/
 └── vite.config.ts        # Vite configuration
 ```
 
-## 🌐 Internationalization (i18n)
+##  Internationalization (i18n)
 
 The application supports three languages with full RTL (right-to-left) support:
 
@@ -218,7 +218,7 @@ The application supports three languages with full RTL (right-to-left) support:
 - Persistent language preference (localStorage)
 - Code-switching detection during interviews
 
-## 🎨 Design System
+##  Design System
 
 ### Color Palette
 
@@ -236,7 +236,7 @@ The application supports three languages with full RTL (right-to-left) support:
 - **Dark mode support** - Full theme switching capability
 - **Smooth animations** - Micro-interactions for better UX
 
-## 🧪 Testing
+##  Testing
 
 Run the test suite:
 
@@ -248,7 +248,7 @@ npm test
 npm run test:watch
 ```
 
-## 📦 Building for Production
+##  Building for Production
 
 Create an optimized production build:
 
@@ -269,10 +269,12 @@ The built files will be in the `dist/` directory. These can be deployed to any s
 npm run preview
 ```
 
-## 🔮 Future Enhancements
+##  Future Enhancements
 
 ### Planned Features
 - [ ] Backend API integration for user authentication
 - [ ] Real speech recognition using Web Speech API or cloud services
 - [ ] AI integration for dynamic question generation (OpenAI/Anthropic)
 - [ ] Interview recording playback
+- [ ] implement language translations in hebrew and arabic
+- [ ] connect google auth and firebase
