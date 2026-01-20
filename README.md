@@ -272,6 +272,7 @@ npm run preview
 ##  Future Enhancements
 
 ### Planned Features
+- [x] fix the github account issue
 - [ ] Backend API integration for user authentication
 - [ ] Real speech recognition using Web Speech API or cloud services
 - [ ] AI integration for dynamic question generation (OpenAI/Anthropic)
