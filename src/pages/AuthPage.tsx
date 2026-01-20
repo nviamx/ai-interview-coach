@@ -4,7 +4,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Sparkles, ArrowLeft, Chrome, Mail } from 'lucide-react';
+import { Sparkles, ArrowLeft, Mail } from 'lucide-react';
 import { LanguageSelector } from '@/components/LanguageSelector';
 
 const AuthPage: React.FC = () => {
@@ -14,15 +14,32 @@ const AuthPage: React.FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  React.useEffect(() => {
+    // Initialize Google Sign-In
+    // @ts-ignore - google is loaded from script in index.html
+    if (window.google) {
+      window.google.accounts.id.initialize({
+        client_id: "YOUR_CLIENT_ID.apps.googleusercontent.com",
+        callback: handleCredentialResponse
+      });
+
+      window.google.accounts.id.renderButton(
+        document.getElementById("google-sign-in-button"),
+        { theme: "outline", size: "large", width: "100%" }  // customization attributes
+      );
+    }
+  }, []);
+
+  const handleCredentialResponse = (response: any) => {
+    // This function handles the response from Google
+    console.log("Encoded JWT ID token: " + response.credential);
+    // Here you would send the token to your backend or Firebase
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Firebase Auth integration will go here
     console.log('Auth submit:', { email, password, isLogin });
-  };
-
-  const handleGoogleSignIn = () => {
-    // Firebase Auth (Google OAuth) integration here
-    console.log('Google sign in clicked');
   };
 
   return (
@@ -57,16 +74,8 @@ const AuthPage: React.FC = () => {
 
           {/* Auth card */}
           <div className="bg-card rounded-2xl shadow-xl border border-border p-8">
-            {/* Google Sign In Button */}
-            <Button
-              variant="google"
-              size="lg"
-              className="w-full mb-6"
-              onClick={handleGoogleSignIn}
-            >
-              <Chrome className="w-5 h-5" />
-              {t('auth.google')}
-            </Button>
+            {/* Google Sign In Button Container */}
+            <div id="google-sign-in-button" className="w-full mb-6 flex justify-center h-[40px]"></div>
 
             {/* Divider */}
             <div className="relative my-6">
