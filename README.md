@@ -8,12 +8,12 @@ AI Interview Coach is a multilingual web application designed to help job seeker
 
 ### Key Highlights
 
-- ** AI-Powered Question Generation** - Tailored questions based on your CV and target role
-- ** Voice-Based Interviews** - Natural conversation flow with speech recognition
-- ** Multilingual Support** - Practice in English, Hebrew, or Arabic with code-switching detection
-- ** Comprehensive Analytics** - Detailed scoring across multiple performance dimensions
-- **👨 Coach Dashboard** - Tools for career coaches and institutions to manage candidates
-- ** Progress Tracking** - Monitor improvement over time with historical data
+- **AI-Powered Question Generation** - Tailored questions based on your CV and target role
+- **Voice-Based Interviews** - Natural conversation flow with speech recognition
+- **Multilingual Support** - Practice in English, Hebrew, or Arabic with code-switching detection
+- **Comprehensive Analytics** - Detailed scoring across multiple performance dimensions
+- **Coach Dashboard** - Tools for career coaches and institutions to manage candidates
+- **Progress Tracking** - Monitor improvement over time with historical data
 
 ##  Features
 
